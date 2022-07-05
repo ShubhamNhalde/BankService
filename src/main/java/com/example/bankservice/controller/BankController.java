@@ -21,6 +21,7 @@ public class BankController {
     @Autowired
     private IBankService bankService;
 
+    //add bank details.
     @PostMapping("/addbankDetails")
     public ResponseEntity<ResponseDto> addingBankDetails(@Valid @RequestBody BankInfoDto bankInfoDto) {
         BankInfo bank = bankService.addBankInfo(bankInfoDto);
